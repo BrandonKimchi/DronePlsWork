@@ -1,0 +1,39 @@
+
+public class State {
+	
+	private double value;
+	private double time;
+	
+	/**
+	 * Constructor that takes value for the state
+	 * @param val The value of the system at that state
+	 * @param time The time at which the state was
+	 */
+	public State(double val, double time){
+		this.value = val;
+		this.time = time;
+	}
+	
+	/**
+	 * Constructor for a State which copies data from another state
+	 * @param state The state to duplicate
+	 */
+	public State(State state){
+		this.value = state.getVal();
+		this.time = state.getTime();
+	}
+	
+	public double getTime(){
+		return time;
+	}
+	
+	public double getVal(){
+		return value;
+	}
+	
+	public void set(State state){
+		this.value = state.getVal();
+		this.time = state.getTime();
+	}
+
+}

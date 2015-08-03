@@ -1,0 +1,30 @@
+
+public class State {
+	
+	static double value;
+	static double time;
+	
+	public State(double val, double time){
+		this.value = val;
+		this.time = time;
+	}
+	
+	public State(State input){
+		this.value = input.getVal();
+		this.time = input.getTime();
+	}
+	
+	public double getTime(){
+		return time;
+	}
+	
+	public double getVal(){
+		return value;
+	}
+	
+	public void set(double val, double time){
+		this.value = val;
+		this.time = time;
+	}
+
+}

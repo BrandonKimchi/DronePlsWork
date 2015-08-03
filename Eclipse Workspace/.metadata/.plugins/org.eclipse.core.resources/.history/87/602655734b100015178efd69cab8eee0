@@ -1,0 +1,20 @@
+
+public class State {
+	
+	static double value;
+	static double time;
+	
+	public State(double val, double time){
+		this.value = val;
+		this.time = time;
+	}
+	
+	public double getTime(){
+		return time;
+	}
+	
+	public double getVal(){
+		return value;
+	}
+
+}

@@ -1,0 +1,27 @@
+
+public class Simulator {
+	
+	public static void main(String[] args){
+		PID pid = new PID(5.0, 1, 0, 0);
+		double time = 0.0;
+		
+		double rate = 0.1;
+		double processRate = 0.2;
+		
+		double value = 0.0;
+		double changeRate = 0.0;
+		while(time < 100){
+			System.out.println(value);
+			
+			if(time % processRate == 0){
+				State state = new State(value, time);
+				double pidOutput = pid.process(state);
+				changeRate = pidOutput;
+			}
+			
+			time += rate;
+			value += changeRate*rate;
+		}
+	}
+
+}
